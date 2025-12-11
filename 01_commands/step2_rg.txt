@@ -1,0 +1,12 @@
+> az group create --name rg-cli-lab --location westeurope
+{
+  "id": "/subscriptions/643e2b26-f9dc-4e2c-91c1-c8fc01c7f14d/resourceGroups/rg-cli-lab",
+  "location": "westeurope",
+  "managedBy": null,
+  "name": "rg-cli-lab",
+  "properties": {
+    "provisioningState": "Succeeded"
+  },
+  "tags": null,
+  "type": "Microsoft.Resources/resourceGroups"
+}

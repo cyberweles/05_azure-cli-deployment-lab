@@ -1,0 +1,13 @@
+> az version
+{
+  "azure-cli": "2.79.0",
+  "azure-cli-core": "2.79.0",
+  "azure-cli-telemetry": "1.1.0",
+  "extensions": {
+    "logic": "1.1.0",
+    "monitor-control-service": "1.2.0"
+  }
+}
+
+> python --version
+Python 3.13.9

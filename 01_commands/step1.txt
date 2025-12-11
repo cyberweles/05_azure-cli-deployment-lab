@@ -1,0 +1,17 @@
+> az account show
+{
+  "environmentName": "AzureCloud",
+  "homeTenantId": "d7305505-55a5-4977-a779-76c79ca6a79d",
+  "id": "643e2b26-f9dc-4e2c-91c1-c8fc01c7f14d",
+  "isDefault": true,
+  "managedByTenants": [],
+  "name": "Azure subscription 1",
+  "state": "Enabled",
+  "tenantDefaultDomain": "cuzytekbartoszgmail.onmicrosoft.com",
+  "tenantDisplayName": "Default Directory",
+  "tenantId": "d7305505-55a5-4977-a779-76c79ca6a79d",
+  "user": {
+    "name": "cuzytekbartosz@gmail.com",
+    "type": "user"
+  }
+}

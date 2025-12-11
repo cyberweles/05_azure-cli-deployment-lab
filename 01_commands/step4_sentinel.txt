@@ -1,0 +1,67 @@
+# Using the Sentinel extension for Azure CLI.
+# Initial CLI error resolved by onboarding the workspace via the Azure portal.
+# Workspace successfully onboarded to Microsoft Sentinel; built-in Fusion rule is active.
+
+---
+
+> az extension add --name sentinel
+> az extension list
+[
+  {
+    ...
+  },
+  {
+    ...
+  },
+  {
+    "experimental": false,
+    "extensionType": "whl",
+    "name": "sentinel",
+    "path": "C:\\Users\\Cuzytek\\.azure\\cliextensions\\sentinel",
+    "preview": false,
+    "version": "0.1.2"
+  }
+]
+
+---
+
+> az sentinel alert-rule list --resource-group rg-cli-lab --workspace-name law-cli-lab
+Command group 'sentinel alert-rule' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
+(BadRequest) {"error":{"code":"BadRequest","message":"Workspace 'law-cli-lab' is not onboarded to Microsoft Sentinel. Please onboard through the portal (https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard) or use the OnboardingStates ARM api to onboard to Sentinel (https://learn.microsoft.com/en-us/rest/api/securityinsights/sentinel-onboarding-states/create?view=rest-securityinsights-2024-03-01)."}}
+Code: BadRequest
+Message: {"error":{"code":"BadRequest","message":"Workspace 'law-cli-lab' is not onboarded to Microsoft Sentinel. Please onboard through the portal (https://learn.microsoft.com/en-us/azure/sentinel/quickstart-onboard) or use the OnboardingStates ARM api to onboard to Sentinel (https://learn.microsoft.com/en-us/rest/api/securityinsights/sentinel-onboarding-states/create?view=rest-securityinsights-2024-03-01)."}}
+
+---
+
+> az sentinel alert-rule list --resource-group rg-cli-lab --workspace-name law-cli-lab
+Command group 'sentinel alert-rule' is experimental and under development. Reference and support levels: https://aka.ms/CLI_refstatus
+[
+  {
+    "alertRuleTemplateName": "f71aba3d-28fb-450b-b192-4e76a83015c8",
+    "description": "Microsoft Sentinel uses Fusion, a correlation engine based on scalable machine learning algorithms, to automatically detect multistage attacks by identifying combinations of anomalous behaviors and suspicious activities that are observed at various stages of the kill chain. On the basis of these discoveries, Azure Sentinel generates incidents that would otherwise be very difficult to catch. By design, these incidents are low-volume, high-fidelity, and high-severity, which is why this detection is turned ON by default.\n\nSince Fusion correlates multiple signals from various products to detect advanced multistage attacks, successful Fusion detections are presented as Fusion incidents on the Microsoft Sentinel Incidents page. This rule covers the following detections:\n- Fusion for emerging threats\n- Fusion for ransomware\n- Scenario-based Fusion detections (122 scenarios)\n\nTo enable these detections, we recommend you configure the following data connectors for best results:\n- Out-of-the-box anomaly detections\n- Microsoft Entra ID Protection\n- Azure Defender\n- Azure Defender for IoT\n- Microsoft 365 Defender\n- Microsoft Cloud App Security    \n- Microsoft Defender for Endpoint\n- Microsoft Defender for Identity\n- Microsoft Defender for Office 365\n- Scheduled analytics rules, both built-in and those created by your security analysts. Analytics rules must contain kill-chain (tactics) and entity mapping information in order to be used by Fusion.\n\nFor the full description of each detection that is supported by Fusion, go to https://aka.ms/SentinelFusion.",
+    "displayName": "Advanced Multistage Attack Detection",
+    "enabled": true,
+    "etag": "\"9100a19f-0000-0d00-0000-693b14290000\"",
+    "id": "/subscriptions/643e2b26-f9dc-4e2c-91c1-c8fc01c7f14d/resourceGroups/rg-cli-lab/providers/Microsoft.OperationalInsights/workspaces/law-cli-lab/providers/Microsoft.SecurityInsights/alertRules/BuiltInFusion",
+    "kind": "Fusion",
+    "lastModifiedUtc": "2025-12-11T18:57:45.814185+00:00",
+    "name": "BuiltInFusion",
+    "resourceGroup": "rg-cli-lab",
+    "severity": "High",
+    "tactics": [
+      "Collection",
+      "CommandAndControl",
+      "CredentialAccess",
+      "DefenseEvasion",
+      "Discovery",
+      "Execution",
+      "Exfiltration",
+      "Impact",
+      "InitialAccess",
+      "LateralMovement",
+      "Persistence",
+      "PrivilegeEscalation"
+    ],
+    "type": "Microsoft.SecurityInsights/alertRules"
+  }
+]

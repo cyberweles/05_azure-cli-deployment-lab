@@ -1,0 +1,21 @@
+05_azure-cli-deployment-lab/
+│
+├── 00_setup/
+│   ├── environment_info.txt
+│
+├── 01_commands/
+│   ├── step1_login.txt
+│   ├── step2_rg.txt
+│   ├── step3_law.txt
+│   ├── step4_sentinel.txt
+│   ├── step5_kql_test.txt
+│   ├── step6_cleanup.txt
+│
+├── 02_screenshots/
+│   ├── portal_rg.png
+│   ├── portal_law.png
+│   ├── portal_sentinel.png
+│   ├── logs_kql_test.png
+│
+└── README.md
+

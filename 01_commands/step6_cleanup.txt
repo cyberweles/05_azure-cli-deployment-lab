@@ -1,0 +1,6 @@
+> az group delete --name rg-cli-lab --yes --no-wait
+
+> az group show --name rg-cli-lab
+(ResourceGroupNotFound) Resource group 'rg-cli-lab' could not be found.
+Code: ResourceGroupNotFound
+Message: Resource group 'rg-cli-lab' could not be found.

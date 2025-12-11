@@ -1,0 +1,4 @@
+SecurityAlert
+| take 5
+
+# KQL test in Microsoft Sentinel Logs – basic query to inspect existing alerts.
