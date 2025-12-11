@@ -16,26 +16,26 @@ This project shows a CLI-first workflow for cloud security beginners, proving fa
 
 ## 2. Repository Structure
 
-05_azure-cli-deployment-lab/
-│
-├── 00_setup/
-│   ├── environment_info.txt          # Subscription, tenant, CLI version
-│
-├── 01_commands/
-│   ├── step1_login.txt               # az login + subscription check
-│   ├── step2_rg.txt                  # Create Resource Group
-│   ├── step3_law.txt                 # Create Log Analytics Workspace
-│   ├── step4_sentinel.txt            # Add Sentinel extension + onboard workspace
-│   ├── step5_kql_test.txt            # Test query via Azure Portal
-│   ├── step6_cleanup.txt             # az group delete
-│
-├── 02_screenshots/
-│   ├── portal_rg.png                 # Resource Group visible in portal
-│   ├── portal_law.png                # Workspace visible in portal
-│   ├── portal_sentinel.png           # Sentinel enabled
-│   ├── logs_kql_test.png             # KQL query result
-│
-└── README.md
+05_azure-cli-deployment-lab/  
+│  
+├── 00_setup/  
+│   ├── environment_info.txt          # Subscription, tenant, CLI version  
+│  
+├── 01_commands/  
+│   ├── step1_login.txt               # az login + subscription check  
+│   ├── step2_rg.txt                  # Create Resource Group  
+│   ├── step3_law.txt                 # Create Log Analytics Workspace  
+│   ├── step4_sentinel.txt            # Add Sentinel extension + onboard workspace  
+│   ├── step5_kql_test.txt            # Test query via Azure Portal  
+│   ├── step6_cleanup.txt             # az group delete  
+│  
+├── 02_screenshots/  
+│   ├── portal_rg.png                 # Resource Group visible in portal  
+│   ├── portal_law.png                # Workspace visible in portal  
+│   ├── portal_sentinel.png           # Sentinel enabled  
+│   ├── logs_kql_test.png             # KQL query result  
+│  
+└── README.md  
 
 ## 3. Tools Used
 - Azure CLI (current version)
@@ -50,13 +50,13 @@ az login
 az account show
 
 ### Step 2 - Create Resource Group
-az group create \\
---name rg-cli-lab \\
+az group create \\  
+--name rg-cli-lab \\  
 --location westeurope
 
 ### Step 3 - Create Log Analytics Workspace
-az monitor log-analytics workspace create \\
---resource-group rg-cli-lab \\
+az monitor log-analytics workspace create \\  
+--resource-group rg-cli-lab \\  
 --workspace-name law-cli-lab
 
 ### Step 4 - Enable Microsoft Sentinel
